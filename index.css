@@ -1,0 +1,61 @@
+/* Add your CSS styles here */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.memory-game {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+
+
+/* Add a new class for matched cards */
+.card.matched {
+  pointer-events: none; /* Disable click events on matched cards */
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  background-color: #ccc; /* Default background color */
+}
+
+.card-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back {
+  background-image: url('background.jpg'); /* Set the background image */
+  background-size: cover; /* Ensure the background image covers the entire card */
+}
+
+.timer {
+  margin-top: 20px;
+}
